@@ -1,2 +1,93 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+// base Class
+Class Animal {
+    return this;
+}
+static eat() {
+    return this;
+}
+
+const obj = new Animal();
+obj.speak(); // the animal object
+const speak = obj.speak;
+move(); // undfined 
+
+Animal.eat() // class Animal
+const eat = Animal.eat;
+eat(); // undefined 
+
+
+
+function Animal() { }
+Animal.prototype.speak = function () {
+    return this;
+}
+
+Animal.eat = function () {
+    return this;
+}
+
+const obj = new Animal();
+const spaek = obj.speak;
+speak(); // global object (in non-strict mode)
+
+Class Animal_without backBone {
+    constructor(name){
+        this.name = name;
+    }
+
+    speak() {
+        console.log('${this.name} makes a noise.');
+    }
+}
+
+Class Antropods extends Animal {
+    constructor(name){
+        super(name); // call the super class constructor and pass in the name parameter
+    }
+    speak(){
+        console.log('${this.name} makes a body vibration')
+    }
+}
+
+const a = new Athropods (Butterfly, Fish, Frog, Tortoise);
+a.speak(); // Butterfly, Fish, Frog, Tortoise makes a body vibration.
+
+Class Animal_with backBone {
+    constructor(name){
+        this.name = name;
+    }
+    speak() {
+        console.log('${this.name} makes a noise');
+    }
+}
+
+Class Animal-with backBone {
+    constructor(name){
+        this.name;
+    }
+    speak() {
+        console.log('${this.name} makes a sound');
+    }
+}
+const b = new vertebrates (Eagle, cat);
+a.speak(); // Eagle, Cat makes a sound.
+
+function Animal() {
+    this.name = name;
+}
+
+Animal.prototype.speak = function () {
+    console.log('${this.name} makes a noise.');
+}
+
+Class Arthropods extends Animal {
+    speak() {
+        console.log('${this.name} makes a body vibration')
+    }
+}
+
+const a = new Arthropods(Butterfly, Fish, Frog, Tortoise);
+a.speak(); // Butterfly, Fish, Frog, Tortoise makes a body vibration.
+
+
+
